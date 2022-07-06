@@ -3,10 +3,10 @@ from flask import Flask,url_for, redirect ,render_template, request,session
 app = Flask(__name__)
 app.secret_key = '123'
 
-users = {"user1": {"UserName": "erani","First Name": "Eran","Last Name": "Zehavi", "Email": "eranosh@gmail.com"},
-         "user2": {"UserName": "dori","First Name": "Dor", "Last Name": "micha", "Email": "dordor@gmail.com"},
-         "user3": {"UserName": "tali","First Name": "Tal", "Last Name": "Ben-Haim", "Email": "talben@gmail.com"},
-         "user4": {"UserName": "ori","First Name": "Ori", "Last Name": "malmilian", "Email": "malmil@gmail.com"},
+users = {"user1": {"UserName": "Yossi","First Name": "Yossi","Last Name": "Abuksis", "Email": "yossi@gmail.com"},
+         "user2": {"UserName": "Salim","First Name": "Salim", "Last Name": "Toama", "Email": "salim@gmail.com"},
+         "user3": {"UserName": "Shalom","First Name": "Shalom", "Last Name": "Tikva", "Email": "shalom@gmail.com"},
+         "user4": {"UserName": "Vincent","First Name": "Vincent", "Last Name": "Enyeama", "Email": "Vincent@gmail.com"},
          "user5": {"UserName": "Ayelet", "First Name": "Ayelet", "Last Name": "Shaked", "Email": "ayeletsha@gmail.com"}
          }
 
