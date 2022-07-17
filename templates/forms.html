@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>form web couse 22 a</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/CSS/formCSS.css') }}">
+</head>
+<body>
+    {% include 'Header.html' %}
+    <h1 id="signinHeader">Sign Up</h1>
+    <form class = "center">
+        <label for="fname" >First Name:</label><br>
+        <input type="text" id="fname" name="fname" class="Buxa"><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" ><br>
+        <label for="email">Enter your email: </label><br>
+        <input type="email" name="email" id="email" required><br>
+        <label for="BirthDate">BirthDate:</label><br>
+        <input type="BirthDate" id="pass" name="BirthDate"  required><br><br>
+        <input type="submit" value="Submit">
+    </form >
+    <h1>Contact Us</h1>
+    <form id = "contact">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="name" name="name" ><br>
+        <label for="adress"> Address:</label><br>
+        <input type="text" id="adress" name="adress" ><br>
+        <label for="comment"> Comment:</label><br>
+        <input type="text" id="comment" name="comment" ><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="CSS.ex.html">next page</a>
+    <p class = center> Yalla Hapoel! </p>
+</body>
+</html>
