@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+
+        {% if session['login'] %}
+        <h3> Logged in as: {{ session['userName'] }}</h3>
+        <form name="logout" action="logout" >
+            <input type="submit" value="Logout">
+        </form>
+        {% endif %}
+
+</body>
+</html>

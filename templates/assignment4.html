@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>assignment4</title>
+</head>
+<body>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for i in messages %}
+           <h4>{{ i }}</h4>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+
+
+<h1>Insert Form</h1>
+<h2>fill here user details:</h2>
+<form name="insert" method="POST" action="/insertUser">
+    <input name="userName" type="text" placeholder="user name"> <br>
+    <input name="firstName" type="text" placeholder="first name"> <br>
+    <input name="lastName" type="text" placeholder="last name"> <br>
+    <input name="email" type="email" placeholder="email">
+    <input type="submit">
+</form>
+
+<hr>
+<h1>list of all users:</h1>
+<ul>
+    {% for user in users %}
+        <li>
+            user Name: {{ user.userName }} <br>
+            first Name: {{ user.firstName }} <br>
+            last Name: {{ user.lastName }} <br>
+            Email: {{ user.email }}
+        </li>
+    {% endfor %}
+</ul>
+
+
+<hr>
+<h1>Update Form</h1>
+<h2>fill here user name you want to change his details, and then fill details to update: </h2>
+<form name="update" method="POST" action="/updateUser">
+    <input name="userName" type="text" placeholder="user name"><br>
+    <input name="firstName" type="text" placeholder="new first name"><br>
+    <input name="lastName" type="text" placeholder="new last name"><br>
+    <input name="email" type="email" placeholder="new email">
+    <input type="submit">
+</form>
+
+<hr>
+<h1>Delete Form</h1>
+<h2>find user you want to delete with his user name</h2>
+<form name="delete" method="POST" action="/deleteUser">
+    <input name="userName" type="text" placeholder="user name">
+    <input type="submit">
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment3_2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='../static/css/design.css') }}">
+</head>
+<body>
+{% include 'Header.html' %}
+<h2>Search user here:</h2>
+<form name="search" method=GET" action="assignment3_2">
+    <input name="user_name" type="text" id="user_name" placeholder="write here">
+    <input type="submit" value="search">
+</form>
+{% if search==True %}
+    {% if find==false %}
+        <h2> cant find user with this nickname</h2>
+    {% elif find==true %}
+            <span>
+                {% for t in users.values() %}
+                    {% for x in t %}
+                        <b> {{ x }} : </b> {{ t[x]}} <br>
+                    {% endfor %} <br>
+                {% endfor %}
+            </span>
+    {% endif %}
+{% endif %}
+
+
+{%if session['login'] == True%}
+    <hr>
+        <a href="/logout">logout</a>
+    <hr>
+    <br>
+    logged in as {{ session['userName'] }}
+{% else %}
+    <hr>
+    <h1>signUp:</h1>
+    <form name="signUp" method="POST" action="assignment3_2">
+        <input name="firstName" placeholder="First name">
+        <input name="lastName" placeholder="Last name">
+        <input name="email" type = email  placeholder="Email">
+        <input name="userName" placeholder="User name">
+        <input type="submit">
+    </form>
+{% endif %}
+
+</body>
+</html>

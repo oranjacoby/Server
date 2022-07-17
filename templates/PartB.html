@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PartB</title>
+    <script src="../static/CV.js" ></script>
+</head>
+<body>
+
+
+    <h2> First Form Frontend</h2>
+
+    please choose your id: <br>
+    <input name="frontend" type="number" id="frontend">
+    <button onclick = "return_users()"> Submit </button>
+
+    <p> </p>
+
+    <br><br>
+
+    <h2> Second Form Backend</h2>
+    <form  method="GET" action="/assignment4/outer_source">
+        please choose your id: <br>
+        <input name="id" type="number">
+        <input type="submit">
+    </form>
+     <br>
+
+    {% if user != {} and user != -1 %}
+        <img src="{{ user.data.avatar }}" alt="pic"><br>
+        <p><b>id</b>- {{ user.data.id }}</p>
+        <p><b>email</b>-  {{ user.data.email }}</p>
+        <p><b>name</b>-  {{ user.data.first_name }}</p>
+        <p><b>last name</b>-  {{ user.data.last_name }}</p>
+        <p><b>url</b>- {{ user.support.url }}</p>
+        <p><b>text</b>- {{ user.support.text }}</p>
+    {% endif %}
+</body>
+</html>
